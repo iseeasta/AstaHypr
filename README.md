@@ -39,7 +39,9 @@ One keypress (`SUPER+T`) reskins **Waybar, Rofi, SwayNC, Kitty, and your wallpap
 <summary><b>🎥 Click to watch the theme switcher in action</b></summary>
 <br>
 
-https://github.com/iseeasta/AstaHypr/Video/demo.mp4
+
+
+https://github.com/iseeasta/AstaHypr/Videos/Recodings/demo.mp4
 
 </details>
 
