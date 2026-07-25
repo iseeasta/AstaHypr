@@ -39,9 +39,7 @@ One keypress (`SUPER+T`) reskins **Waybar, Rofi, SwayNC, Kitty, and your wallpap
 <summary><b>🎥 Click to watch the theme switcher in action</b></summary>
 <br>
 
-https://github.com/iseeasta/AstaHypr/assets/demo.mp4
-
-*(Or embed a GIF: `![demo](docs/screenshots/theme-switch-demo.gif)`)*
+https://github.com/iseeasta/AstaHypr/Video/demo.mp4
 
 </details>
 
@@ -133,7 +131,7 @@ Themes are just color files — the whole system auto-generates everything else 
 3. *(Optional)* Add a matching wallpaper to `~/Pictures/wallpapers/themes/mytheme.jpg` so the switcher also updates your background.
 
 
-## 🖼️ Chnaging Pictures in Terminal and Lockscreen
+## 🖼️ Chnaging Pictures
 
 these are just normal changeable pictures and you can choose acc to your choice
 
@@ -157,20 +155,22 @@ these are just normal changeable pictures and you can choose acc to your choice
 ```
 2. That's it — Save it & logout and Check Again
 3. for terminal
-   ```bash
+```bash
    nano ~/.config/fastfetch/config.json
 ```
-```json
-     "logo": {
-     "type": "kitty",
-     "source": "~/.config/fastfetch/yourpicname.jpg",     # that you will place at (~/.config/fastfetch/ypurpic.jpg)
-     "width": 33,
-     "padding": {
-     "top": 1,
-     "left": 3
-  }
----
+```
+  "logo": {
+      "type": "kitty",
+      "source": "~/.config/fastfetch/YourImage.jpg",
+      "width": 33,
+      "padding": {
+          "top": 1,
+          "left": 3
+        }
+     }
+```
 
+---
 ## 🛠️ Troubleshooting
 
 <details>
@@ -218,8 +218,8 @@ AstaHypr/
 ├── Videos/                # video walkthrough of rice
 ├── fastfetch/             # fastfetch for terminal
 ├── Pictures/              # Contains all screenshots and PIctures
-    ├── Pfp/               # lockscreen pfp
-    └── Screenshots/       # screenshots
+|   ├── Pfp/               # lockscreen pfp
+|   └── Screenshots/       # screenshots
 ├── gtk-3.0/               # Thunar/GTK3 theming
 ├── hypr/                  # Hyprland config + Lua modules (binds, autostart)
 ├── kitty/                 # Terminal config
