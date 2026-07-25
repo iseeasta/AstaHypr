@@ -23,15 +23,15 @@ One keypress (`SUPER+T`) reskins **Waybar, Rofi, SwayNC, Kitty, and your wallpap
 
 | Desktop | App Launcher |
 |---|---|
-| ![desktop](docs/screenshots/desktop.png) | ![launcher](docs/screenshots/launcher.png) |
+| ![desktop](Pictures/Screenshots/desktop.png) | ![launcher](Pictures/Screenshots/app_drawer.png) |
 
 | Notification Center | Lock Screen |
 |---|---|
-| ![swaync](docs/screenshots/swaync.png) | ![hyprlock](docs/screenshots/hyprlock.png) |
+| ![swaync](Pictures/Screenshots/notification_center.png) | ![hyprlock](Pictures/Screenshots/lockscreen.png) |
 
-| Wallpaper Picker | Power Menu |
-|---|---|
-| ![wallpaper](docs/screenshots/wallpaper.png) | ![powermenu](docs/screenshots/powermenu.png) |
+| Wallpaper Picker | Power Menu | Terminal
+|---|---|---|
+| ![wallpaper](Pictures/Screenshots/wallpaperPIcker.png) | ![powermenu](Pictures/Screenshots/powermenu.png) | ![Terminal](Pictures/Screenshots/terminal.png) |
 
 </details>
 
@@ -39,7 +39,7 @@ One keypress (`SUPER+T`) reskins **Waybar, Rofi, SwayNC, Kitty, and your wallpap
 <summary><b>🎥 Click to watch the theme switcher in action</b></summary>
 <br>
 
-https://github.com/YOUR_USERNAME/dotfiles/assets/demo.mp4
+https://github.com/iseeasta/AstaHypr/assets/demo.mp4
 
 *(Or embed a GIF: `![demo](docs/screenshots/theme-switch-demo.gif)`)*
 
@@ -71,8 +71,8 @@ https://github.com/YOUR_USERNAME/dotfiles/assets/demo.mp4
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/iseeasta/AstaHypr.git ~/AstaHypr
+cd ~/AstaHypr
 chmod +x install.sh
 ./install.sh
 ```
@@ -177,14 +177,19 @@ This is a known upstream Hyprland compositor bug on some driver/version combinat
 ## 📁 Repo Structure
 
 ```
-dotfiles/
-├── hypr/           # Hyprland config + Lua modules (binds, autostart)
-├── waybar/         # Waybar config, themes, and scripts
-├── rofi/           # Rofi launcher, powermenu, colors
-├── swaync/         # Notification/control center config + scripts
-├── kitty/          # Terminal config
-├── gtk-3.0/        # Thunar/GTK3 theming
-├── install.sh      # One-command installer
+AstaHypr/
+├── Videos/                # video walkthrough of rice
+├── Pictures/              # Contains all screenshots and PIctures
+    ├── Pfp/               # loclscrren pfp
+    └── Screenshots/       # screenshots
+├── gtk-3.0/               # Thunar/GTK3 theming
+├── hypr/                  # Hyprland config + Lua modules (binds, autostart)
+├── kitty/                 # Terminal config
+├── rofi/                  # Rofi launcher, powermenu, colors
+├── swaync/                # Notification/control center config + scripts
+├── waybar/                # Waybar config, themes, and scripts
+├── wob/                   # wob ini (for volumes and brightness)
+├── install.sh             # One-command installer
 └── README.md
 ```
 
@@ -200,6 +205,6 @@ dotfiles/
 
 <div align="center">
 
-Built by [Ansh](https://github.com/iseeasta) — feel free to fork and make it yours.
+Built by [Sameer](https://github.com/iseeasta) — feel free to fork and make it yours.
 
 </div>
