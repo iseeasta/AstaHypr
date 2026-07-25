@@ -31,7 +31,7 @@ One keypress (`SUPER+T`) reskins **Waybar, Rofi, SwayNC, Kitty, and your wallpap
 
 | Wallpaper Picker | Power Menu | Terminal
 |---|---|---|
-| ![wallpaper](Pictures/Screenshots/wallpaperPIcker.png) | ![powermenu](Pictures/Screenshots/powermenu.png) | ![Terminal](Pictures/Screenshots/terminal.png) |
+| ![wallpaper](Pictures/Screenshots/wallpaperPicker.png) | ![powermenu](Pictures/Screenshots/powermenu.png) | ![Terminal](Pictures/Screenshots/terminal.png) |
 
 </details>
 
@@ -133,6 +133,29 @@ Themes are just color files — the whole system auto-generates everything else 
 3. *(Optional)* Add a matching wallpaper to `~/Pictures/wallpapers/themes/mytheme.jpg` so the switcher also updates your background.
 
 ---
+## 🖼️ Chnaging Pictures in Terminal and Lockscreen
+
+these are just normal changeable pictures and you can choose acc to your choice
+
+1. Create a new Rofi color file:
+```bash
+   nano ~/.config/hypr/hyprlock.conf
+```
+```conf
+   * {
+       background:     #1a1a1aFF;
+       background-alt: #2a2a2aFF;
+       foreground:     #ffffffFF;
+       selected:       #ff5555FF;
+       active:         #55ff55FF;
+       urgent:         #ff0000FF;
+   }
+```
+2. That's it — run the theme switcher (`SUPER+T`), and `mytheme` will already appear in the list. A matching Waybar palette is auto-generated on first use.
+3. *(Optional)* Add a matching wallpaper to `~/Pictures/wallpapers/themes/mytheme.jpg` so the switcher also updates your background.
+   
+
+---
 
 ## 🛠️ Troubleshooting
 
@@ -180,7 +203,7 @@ This is a known upstream Hyprland compositor bug on some driver/version combinat
 AstaHypr/
 ├── Videos/                # video walkthrough of rice
 ├── Pictures/              # Contains all screenshots and PIctures
-    ├── Pfp/               # loclscrren pfp
+    ├── Pfp/               # lockscreen pfp
     └── Screenshots/       # screenshots
 ├── gtk-3.0/               # Thunar/GTK3 theming
 ├── hypr/                  # Hyprland config + Lua modules (binds, autostart)
@@ -189,8 +212,8 @@ AstaHypr/
 ├── swaync/                # Notification/control center config + scripts
 ├── waybar/                # Waybar config, themes, and scripts
 ├── wob/                   # wob ini (for volumes and brightness)
-├── install.sh             # One-command installer
-└── README.md
+├── README.md
+└── install.sh             # One-command installer
 ```
 
 ---
