@@ -137,23 +137,25 @@ Themes are just color files — the whole system auto-generates everything else 
 
 these are just normal changeable pictures and you can choose acc to your choice
 
-1. Create a new Rofi color file:
+1. Chnage the name to your Pic name:
 ```bash
    nano ~/.config/hypr/hyprlock.conf
 ```
 ```conf
-   * {
-       background:     #1a1a1aFF;
-       background-alt: #2a2a2aFF;
-       foreground:     #ffffffFF;
-       selected:       #ff5555FF;
-       active:         #55ff55FF;
-       urgent:         #ff0000FF;
-   }
+   # Profile picture
+image {
+    monitor =
+    path = /home/iseeasta/Pictures/Pfp/Asta1.jpg      # Here cahnge (Asta1.jpg) to (yourpicname.jpg)
+    size = 90
+    rounding = -1
+    border_size = 3
+    border_color = rgba(180, 190, 254, 0.8)
+    position = 100, 90
+    halign = left
+    valign = center
+}
 ```
-2. That's it — run the theme switcher (`SUPER+T`), and `mytheme` will already appear in the list. A matching Waybar palette is auto-generated on first use.
-3. *(Optional)* Add a matching wallpaper to `~/Pictures/wallpapers/themes/mytheme.jpg` so the switcher also updates your background.
-   
+2. That's it — Save it & logout and Check Again
 
 ---
 
