@@ -40,12 +40,11 @@ One keypress (`SUPER+T`) reskins **Waybar, Rofi, SwayNC, Kitty, and your wallpap
 
 <br>
 
-https://github.com/user-attachments/assets/YOUR-VIDEO-ID-HERE
+![Demo](Videos/Recordings/demo.gif)
 
 </details>
 
 ---
-
 ## ✨ Features
 
 - 🎨 **Unified theme switcher** — `SUPER+T` opens a Rofi picker with 16+ themes (Catppuccin, Nord, Dracula, Gruvbox, and more). Picking one instantly recolors Waybar, Rofi, SwayNC, and Kitty, and swaps your wallpaper — all from one script.
