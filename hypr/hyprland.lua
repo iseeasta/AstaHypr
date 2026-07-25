@@ -1,0 +1,10 @@
+-- Main entry point — require order matters
+require("modules.monitors")
+require("modules.env")
+require("modules.autostart")
+require("modules.decoration")
+require("modules.input")
+require("modules.binds")
+require("modules.rules")
+require("modules.animations")
+require("modules.layouts")

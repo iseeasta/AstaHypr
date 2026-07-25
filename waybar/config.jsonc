@@ -1,0 +1,353 @@
+{
+  "layer":"top",
+  "position":"top",
+  "height":34,
+  "spacing":5,
+
+
+  "margin-top":3,
+  "margin-left":3,
+  "margin-right":3,
+  "marfin-bottom": 0,
+
+
+  "modules-left":
+  [
+    "hyprland/workspaces",
+    "group/panelbar"
+  ],
+
+  "modules-center":
+  [
+    "custom/notification",
+    "clock",
+    "idle_inhibitor"
+  ],
+
+  "modules-right": [
+    "group/system",
+    "group/connectivity",
+    "group/device"
+],
+
+"group/panelbar": {
+    "orientation": "horizontal",
+    "drawer": {
+        "transition-duration": 300,
+        "transition-left-to-right": true
+    },
+    "modules": [
+        "wlr/taskbar",
+        "hyprland/window"
+    ]
+},
+
+
+"group/system": {
+    "orientation": "horizontal",
+    "drawer": {
+        "transition-duration": 300,
+        "transition-left-to-right": true
+    },
+    "modules": [
+        "cpu",
+        "memory",
+        "disk"
+    ]
+},
+
+"group/connectivity": {
+    "orientation": "horizontal",
+    "drawer": {
+        "transition-duration": 300,
+        "transition-left-to-right": true
+    },
+    "modules": [
+        "network",
+        "bluetooth",
+        "custom/location",
+        "custom/airplane",
+        "custom/weather"
+    ]
+},
+
+"group/device": {
+    "orientation": "horizontal",
+    "drawer": {
+        "transition-duration": 300,
+        "transition-left-to-right": false
+    },
+    "modules": [
+        "custom/power",
+        "tray",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "custom/power-profile",
+        "custom/shader"
+    ]
+},
+
+  "hyprland/workspaces":
+  {
+    "format":"{icon}",
+    "persistent-workspaces":
+    {
+      "*": [1,2,3,4,5]
+    },
+    "format-icons":
+    {
+      "1":"Ⅰ",
+      "2":"Ⅱ",
+      "3":"Ⅲ",
+      "4":"Ⅳ",
+      "5":"Ⅴ",
+      "active":"",
+      "default":""
+    }
+  },
+
+  "wlr/taskbar": {
+	"format": "{icon}",
+	"icon-size": 14,
+	"icon-theme": "Numix-Circle",
+	"tooltip-format": "{title}",
+	"on-click": "activate",
+	"on-click-middle": "close",
+	"ignore-list": [
+	    "Alacritty"
+	],
+	"app_ids-mapping": {
+		"firefoxdeveloperedition": "firefox-developer-edition"
+	},
+	"rewrite": {
+		"Firefox Web Browser": "Firefox",
+		"Foot Server": "Terminal"
+	}
+},
+
+  "hyprland/window":{
+    "max-length":60
+  },
+
+
+
+
+
+
+  "custom/notification": {
+    "format": "󰂚",
+
+    "tooltip": true,
+    "tooltip-format": "<span size='14000' weight='bold'>󰂚 Notification Center</span>\n\n<span foreground='#89b4fa'>🖱 Left Click</span>   Open Notification Center\n<span foreground='#f9e2af'>🖱 Right Click</span>  Toggle Do Not Disturb\n<span foreground='#a6e3a1'>🖱 Middle Click</span> Clear Notifications\n\n<span foreground='#cdd6f4'>Stay updated with your system alerts.</span>",
+
+    "on-click": "swaync-client -t",
+    "on-click-right": "swaync-client -d",
+    "on-click-middle": "swaync-client -C"
+},
+
+  "clock": {
+	"format": "{:%H:%M}  ",
+	"format-alt": "{:%A, %B %d, %Y (%R)} 󰃰 ",
+	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+	"calendar": {
+		"mode"             : "year",
+		"mode-mon-col"     : 3,
+		"weeks-pos"        : "right",
+		"first-day-of-week": 1,
+		"on-scroll"        : 1,
+		"on-click-right"   : "mode",
+		"format": {
+			"months":     "<span color='#ffead3'><b>{}</b></span>",
+			"days":       "<span color='#ecc6d9'><b>{}</b></span>",
+			"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+			"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+			"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+		}
+	},
+	"actions": {
+		"on-click-right": "mode",
+		"on-click-forward": "tz_up",
+		"on-click-backward": "tz_down",
+		"on-scroll-up": "shift_up",
+		"on-scroll-down": "shift_down"
+	}
+},
+
+"idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": {
+		"activated": "󰈈",
+		"deactivated": "󰈉"
+	},
+	"timeout": 480,
+	"dynamic-timeouts": true,
+	"timeout-step": 10
+},
+
+
+
+
+
+
+  "cpu":{
+    "format":" {usage}%"
+  },
+
+  "memory":{
+    "format":"󰍛 {}%"
+  },
+
+  "disk":{
+    "format":" {percentage_used}%"
+  },
+
+  "network": {
+    "interval": 2,
+    "format-wifi": "{icon}  {essid}",
+    "format-icons": [
+        "󰤯",  
+        "󰤟",  
+        "󰤢",  
+        "󰤥",  
+        "󰤨"   
+    ],
+    "format-ethernet": "󰈀  Ethernet",
+    "format-linked": "󰈀  {ifname}",
+    "format-disconnected": "󰤮  Offline",
+    "tooltip": true,
+    "tooltip-format-wifi": "SSID: {essid}\nSignal: {signalStrength}%\nFrequency: {frequency} MHz\nIP: {ipaddr}",
+    "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}",
+    "tooltip-format-disconnected": "No network connection",
+    "max-length": 30
+  },
+
+ "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "󰂲 Off",
+    "format-off": "󰂲 Off",
+    "format-on": "󰂯 On",
+    "format-connected": "󰂱 {device_alias}",
+    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
+    "format-no-controller": "󰂲 No Adapter",
+    "tooltip": true,
+    "tooltip-format": "{controller_alias}\n{controller_address}",
+    "tooltip-format-connected": "{device_alias}\nBattery: {device_battery_percentage}%\nAddress: {device_address}"
+},
+
+"custom/airplane": {
+    "exec": "~/.config/waybar/scripts/airplane-status.sh",
+    "interval": 5,
+    "format": "{}",
+    "tooltip-format": "Airplane Mode",
+    "on-click": "~/.config/swaync/scripts/airplane-toggle.sh",
+    "return-type": ""
+},
+
+"custom/location": {
+    "exec": "~/.config/waybar/scripts/location-status.sh",
+    "interval": 5,
+    "format": "{}",
+    "tooltip-format": "Location Services",
+    "on-click": "~/.config/swaync/scripts/location-toggle.sh",
+    "return-type": ""
+},
+
+"custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather-aqi.sh",
+    "interval": 600,
+    "return-type": "json",
+    "tooltip": true
+},
+
+
+
+
+
+"custom/shader": {
+    "exec": "~/.config/waybar/scripts/shader-status.sh",
+    "interval": 5,
+    "format": "{}",
+    "on-click": "~/.config/waybar/scripts/shader-picker.sh",
+    "return-type": ""
+},
+
+"custom/power-profile": {
+    "exec": "~/.config/waybar/scripts/power-profile-status.sh",
+    "interval": 5,
+    "format": "{}",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/power-profile-toggle.sh",
+    "return-type": ""
+},
+
+  "pulseaudio": {
+	"format": "{volume}% {icon}",
+	"format-bluetooth": "{volume}% {icon}",
+	"format-muted": "",
+	"format-icons": {
+		"headphone": "",
+		"hands-free": "",
+		"headset": "󰋎",
+		"phone": "",
+		"phone-muted": "",
+		"portable": "",
+		"car": "",
+		"default": ["", ""]
+	},
+	"scroll-step": 1,
+	"on-click": "pavucontrol"
+},
+
+  "backlight":
+  {
+    "format":"󰃠 {percent}%"
+  },
+
+  "battery":
+  {
+    "states":
+    {
+      "warning":30,
+      "critical":15
+      },
+      "format":"{icon} {capacity}%",
+      "format-charging":"󰂄 {capacity}%",
+      "format-icons":
+      [
+        "󰂎",
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+        ]
+      },
+
+  "tray":
+  {
+    "spacing":8
+  },
+
+  "custom/updates":
+  {
+    "format":"󰏖 {}",
+    "interval":1800,
+    "exec":"bash ~/.config/waybar/scripts/updates.sh",
+    "on-click":"kitty -e sudo dnf upgrade"
+  },
+  
+  "custom/power": {
+    "format": "󰐥",
+    "tooltip": true,
+    "tooltip-format": "<span size='13000' weight='bold'>󰐥  Power Menu</span>\n\n<span foreground='#89b4fa'>🖱 Left Click</span>   Open Power Menu\n<span foreground='#f9e2af'>🖱 Right Click</span>  Lock Session\n<span foreground='#a6e3a1'>🖱 Middle Click</span> Logout\n\n<span foreground='#cdd6f4'>Available actions:</span>\n • 󰌾 Lock\n • 󰍃 Logout\n • 󰒲 Suspend\n • 󰤄 Hibernate\n • 󰜉 Restart\n • 󰐥 Shutdown",
+    "on-click": "~/.config/waybar/scripts/powermenu.sh",
+    "on-click-right": "hyprlock",
+    "on-click-middle": "hyprctl dispatch exit"
+}
+}

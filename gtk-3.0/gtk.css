@@ -1,0 +1,141 @@
+@import url("file:///home/iseeasta/.config/waybar/themes/current.css");
+
+window, .background {
+    background-color: @base;
+    color: @text;
+}
+
+.sidebar {
+    background-color: @mantle;
+    color: @text;
+}
+
+.sidebar row {
+    color: @text;
+}
+
+.sidebar row:selected {
+    background-color: @lavender;
+    color: @base;
+}
+
+headerbar {
+    background-color: @surface0;
+    color: @text;
+}
+
+button {
+    background-color: @surface1;
+    color: @text;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: @lavender;
+    color: @base;
+}
+
+.view {
+    background-color: @base;
+    color: @text;
+}
+
+.view:selected {
+    background-color: @lavender;
+    color: @base;
+}
+
+GtkTreeView, GtkIconView {
+    background-color: @base;
+    color: @text;
+}
+
+.sidebar row:selected,
+.sidebar row:selected label,
+placessidebar row:selected {
+    background-color: @lavender;
+    color: @base;
+}
+
+.sidebar row:selected image {
+    color: @base;
+}
+
+
+ThunarShortcutsView {
+    background-color: @mantle;
+    color: @text;
+}
+
+ThunarShortcutsView row {
+    color: @text;
+}
+
+ThunarShortcutsView row:selected,
+ThunarShortcutsView row:selected label,
+ThunarShortcutsView row:selected image {
+    background-color: @lavender;
+    color: @base;
+}
+
+
+GtkToolbar {
+    background-color: @surface0;
+    color: @text;
+    background-image: none;
+}
+
+GtkToolbar button {
+    background-color: @surface1;
+    color: @text;
+}
+
+GtkToolbar entry {
+    background-color: @surface0;
+    color: @text;
+}
+
+ThunarPathEntry {
+    background-color: @surface0;
+    color: @text;
+}
+
+ThunarPathEntry entry,
+ThunarPathEntry box,
+ThunarPathEntry toolitem {
+    background-color: @surface0;
+    color: @text;
+}
+window ThunarPathEntry,
+window ThunarPathEntry entry {
+    background-color: @surface0;
+    color: @text;
+}
+
+toolbar.horizontal,
+.toolbar.horizontal {
+    background-color: @surface0;
+    background-image: none;
+    color: @text;
+}
+
+toolbar.horizontal.flat,
+.toolbar.horizontal.flat {
+    background-color: @surface0;
+    background-image: none;
+}
+
+entry {
+    background-color: @surface0;
+    color: @text;
+    background-image: none;
+}
+
+ThunarPathEntry entry,
+toolitem entry,
+box entry {
+    background-color: @surface0;
+    color: @text;
+    background-image: none;
+    border-color: @surface2;
+}

@@ -1,0 +1,82 @@
+@import url("file:///home/iseeasta/.config/waybar/themes/current.css");
+
+:root {
+  --cc-bg: @base;
+  --noti-border-color: @surface2;
+  --noti-bg: @surface0;
+  --noti-bg-darker: @mantle;
+  --noti-bg-hover: @surface1;
+  --noti-bg-focus: @surface1;
+  --noti-close-bg: @red;
+  --noti-close-bg-hover: @peach;
+  --text-color: @text;
+  --text-color-disabled: @subtext;
+  --bg-selected: @lavender;
+  --border-radius: 16px;
+  --font-size-body: 13px;
+  --font-size-summary: 14px;
+}
+
+.control-center {
+  background: @base;
+  border: 1px solid @surface2;
+}
+
+.notification-row .notification-background {
+  background: @surface0;
+  color: @text;
+}
+
+.widget-title {
+  color: @text;
+}
+
+.widget-title button {
+  background: @surface1;
+  color: @text;
+}
+
+.widget-dnd {
+  background: @surface0;
+}
+
+.widget-buttons-grid flowboxchild > button {
+  background: @surface0;
+  color: @text;
+  font-size: 16px;
+  min-width: 42px;
+  min-height: 60px;
+  border-radius: 50%;
+  margin: 4px;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.widget-buttons-grid flowboxchild > button:hover {
+  background: @lavender;
+  color: @base;
+}
+
+.widget-buttons-grid flowboxchild > button.toggle:checked {
+  background: @green;
+  color: @base;
+}
+
+.widget-volume, .widget-backlight {
+  background: @surface0;
+}
+
+.widget-volume scale trough,
+.widget-backlight scale trough {
+  background: @surface2;
+}
+
+.widget-volume scale trough highlight,
+.widget-backlight scale trough highlight {
+  background: @lavender;
+}
+
+.widget-mpris {
+  background: @surface0;
+  color: @text;
+}
