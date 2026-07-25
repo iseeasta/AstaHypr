@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌿 Hyprland Dotfiles
+# 🌿 AstaHypr 
 
 **A fully-themed Hyprland rice with a one-key theme switcher that syncs colors and wallpaper across your entire desktop.**
 
