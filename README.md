@@ -132,7 +132,7 @@ Themes are just color files — the whole system auto-generates everything else 
 2. That's it — run the theme switcher (`SUPER+T`), and `mytheme` will already appear in the list. A matching Waybar palette is auto-generated on first use.
 3. *(Optional)* Add a matching wallpaper to `~/Pictures/wallpapers/themes/mytheme.jpg` so the switcher also updates your background.
 
----
+
 ## 🖼️ Chnaging Pictures in Terminal and Lockscreen
 
 these are just normal changeable pictures and you can choose acc to your choice
@@ -143,20 +143,32 @@ these are just normal changeable pictures and you can choose acc to your choice
 ```
 ```conf
    # Profile picture
-image {
-    monitor =
-    path = /home/iseeasta/Pictures/Pfp/Asta1.jpg      # Here cahnge (Asta1.jpg) to (yourpicname.jpg)
-    size = 90
-    rounding = -1
-    border_size = 3
-    border_color = rgba(180, 190, 254, 0.8)
-    position = 100, 90
-    halign = left
-    valign = center
-}
+    image {
+       monitor =
+       path = /home/iseeasta/Pictures/Pfp/Asta1.jpg      # Here cahnge (Asta1.jpg) to (yourpicname.jpg)
+       size = 90
+       rounding = -1
+       border_size = 3
+       border_color = rgba(180, 190, 254, 0.8)
+       position = 100, 90
+       halign = left
+       valign = center
+    }
 ```
 2. That's it — Save it & logout and Check Again
-
+3. for terminal
+   ```bash
+   nano ~/.config/fastfetch/config.json
+```
+```json
+     "logo": {
+     "type": "kitty",
+     "source": "~/.config/fastfetch/yourpicname.jpg",     # that you will place at (~/.config/fastfetch/ypurpic.jpg)
+     "width": 33,
+     "padding": {
+     "top": 1,
+     "left": 3
+  }
 ---
 
 ## 🛠️ Troubleshooting
@@ -204,6 +216,7 @@ This is a known upstream Hyprland compositor bug on some driver/version combinat
 ```
 AstaHypr/
 ├── Videos/                # video walkthrough of rice
+├── fastfetch/             # fastfetch for terminal
 ├── Pictures/              # Contains all screenshots and PIctures
     ├── Pfp/               # lockscreen pfp
     └── Screenshots/       # screenshots
